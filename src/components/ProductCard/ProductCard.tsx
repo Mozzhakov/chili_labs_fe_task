@@ -9,6 +9,7 @@ import {
   StyledProductCardRatingWrap,
   StyledProductCardBottomPanel,
   StyledProductCardFaStar,
+  StyledProductCardImageWrap,
 } from "./StyledProductCard";
 
 interface ProductCardProps {
@@ -32,14 +33,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     <StyledProductCard>
       <StyledProductCardLink href={`/product/${product.id}`}>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
+        <StyledProductCardImageWrap>
           <Image
             src={product.images[0]}
             alt={product.title}
@@ -53,7 +47,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <StyledProductCardSubtitle>
             {product.category}
           </StyledProductCardSubtitle>
-        </div>
+        </StyledProductCardImageWrap>
         <StyledProductCardBottomPanel>
           <StyledProductCardParagraph>
             €{product.price}

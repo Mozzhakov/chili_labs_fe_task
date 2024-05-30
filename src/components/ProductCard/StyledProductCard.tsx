@@ -13,6 +13,13 @@ export const StyledProductCard = styled.div`
   }
 `;
 
+export const StyledProductCardImageWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const StyledProductCardLink = styled.a`
   display: flex;
   flex-direction: column;
